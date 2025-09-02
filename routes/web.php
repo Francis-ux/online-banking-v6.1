@@ -12,8 +12,6 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 Route::post('/contact/store', [PageController::class, 'contactStore'])->name('contact.store');
 
-Route::get('/faqs', [PageController::class, 'faqs'])->name('faqs');
-
 Route::get('/services', [PageController::class, 'services'])->name('services');
 
 require_once __DIR__ . '/auth.php';

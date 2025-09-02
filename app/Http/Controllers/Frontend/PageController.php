@@ -45,11 +45,4 @@ class PageController extends Controller
 
         return view('frontend.pages.services', $data);
     }
-
-    public function faqs()
-    {
-        $data = ['title' => 'Faqs'];
-
-        return view('frontend.pages.faqs', $data);
-    }
 }
