@@ -58,18 +58,24 @@
         </div>
         <div class="swiper-meta">
             <ul class="links">
-                <li><a class="fab fa-facebook" href="#"></a></li>
-                <li><a class="fab fa-twitter" href="#"></a></li>
-                <li><a class="fab fa-instagram" href="#"></a></li>
+                <li><a class="fab fa-facebook" href="https://www.facebook.com"></a></li>
+                <li><a class="fab fa-twitter" href="https://www.twitter.com"></a></li>
+                <li><a class="fab fa-instagram" href="https://www.instagram.com"></a></li>
                 <li>
-                    <a class="fab fa-facebook-messenger" href="#"></a>
+                    <a class="fab fa-facebook-messenger" href="https://www.messenger.com"></a>
                 </li>
-                <li><a class="fab fa-linkedin" href="#"></a></li>
-                <li><a class="fab fa-snapchat" href="#"></a></li>
+                <li><a class="fab fa-linkedin" href="https://www.linkedin.com"></a></li>
+                <li><a class="fab fa-snapchat" href="https://www.snapchat.com"></a></li>
             </ul>
-            <div class="contacts">
-                <div class="fa fa-cellphone-iphone"></div>
-            </div>
+            @if (env('APP_PHONE')) 
+                <div class="contacts">
+                    <a href="tel:+{{ env('APP_PHONE') }}" style="color:white !important">
+                        <div class="fa fa-phone">
+                        </div>
+                    </a>
+    
+                </div>
+            @endif
             <!-- Swiper Pagination-->
             <div class="swiper-pagination"></div>
         </div>
@@ -116,7 +122,7 @@
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="blurb-boxed-2 blurb-boxed-darkest">
-                    <p class="exeption">The Best Choice 2018</p>
+                    <p class="exeption">The Best Choice {{ date('Y') }}</p>
                     <h5 class="title">
                         Reliable and Secure Credit Cards and Deposits for You
                     </h5>
@@ -212,8 +218,8 @@
             </div>
             <div class="row row-20 justify-content-center justify-content-lg-between">
                 <div class="col-md-10 col-lg-6 wow fadeIn">
-                    <img class="img-bordered" src="/frontend/assets/bankAsset/images/index-1-2-570x379.jpg" alt=""
-                        width="570" height="379" />
+                    <img class="img-bordered" src="/frontend/assets/bankAsset/images/index-1-2-570x379.jpg"
+                        alt="" width="570" height="379" />
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-5">
                     <div class="text-block-2">
@@ -674,9 +680,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="button-wrap-lg">
-                <a class="button button-lg button-primary" href="/">View All Asked Questions</a>
             </div>
         </div>
     </section>
