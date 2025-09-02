@@ -168,7 +168,7 @@ class LoanController extends Controller
             ]);
 
             // Create notification
-            $message = "Loan of {$user->currency} {$loan->amount} (Ref: {$loan->reference_id}) fully repaid.";
+            $message = "Loan of " . currency($user->currency) . formatAmount($loan->amount) . " (Ref: {$loan->reference_id}) fully repaid.";
 
             Notification::create([
                 'uuid' => str()->uuid(),
